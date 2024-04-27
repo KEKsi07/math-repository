@@ -1,10 +1,14 @@
 import express from 'express';
 
+import { problemRouter } from './routes/problem-routes';
+
 const app = express();
-const PORT = 3000;
+const PORT:number = 3000;
+
+app.use('/problems', problemRouter);
 
 app.get('/', (req, res) => {
-  res.send('Hello, TypeScript with Express!');
+  res.send('Home Page Test');
 });
 
 app.listen(PORT, () => {

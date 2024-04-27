@@ -43,4 +43,6 @@ INSERT INTO `user` (`user_id`, `user_username`, `user_password`) VALUES
 (0, "admin", "admin");
 
 INSERT INTO `problem` (`problem_id`, `problem_text`) VALUES
-(0, "");
+(1, "problem1"),
+(2, "problem2"),
+(3, "find all f:R -> R such that f(x) = x for all real numbers x");
