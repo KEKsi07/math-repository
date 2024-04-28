@@ -26,6 +26,17 @@ CREATE TABLE `problem`(
 );
 
 --
+-- Table: `solution`
+--
+CREATE TABLE `solution`(
+	`solution_id` INT(10) NOT NULL AUTO_INCREMENT,
+    `solution_text` VARCHAR(200),
+    `problem_id` INT(10),
+    PRIMARY KEY(`solution_id`),
+    FOREIGN KEY(`problem_id`) REFERENCES `problem`(`problem_id`)
+);
+
+--
 -- Table: `hint`
 --
 CREATE TABLE `hint`(
@@ -40,9 +51,28 @@ CREATE TABLE `hint`(
 -- Populate `user` table with test data
 --
 INSERT INTO `user` (`user_id`, `user_username`, `user_password`) VALUES
-(0, "admin", "admin");
+(1, "admin", "admin");
 
+--
+-- Populate `problem` table with test data
+--
 INSERT INTO `problem` (`problem_id`, `problem_text`) VALUES
 (1, "problem1"),
 (2, "problem2"),
 (3, "find all f:R -> R such that f(x) = x for all real numbers x");
+
+--
+-- Populate `hint` table with test data
+--
+INSERT INTO `hint` (`hint_id`, `hint_text`, `problem_id`) VALUES
+(1, "hint1", 1),
+(2, "hint2", 1),
+(3, "substitute x -> y", 3);
+
+--
+-- Populate `solution` table with test data
+--
+INSERT INTO `solution` (`solution_id`, `solution_text`, `problem_id`) VALUES
+(1, "solution1", 1),
+(2, "solution2", 2),
+(3, "f(x) = x", 3);
