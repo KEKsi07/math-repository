@@ -59,7 +59,7 @@ INSERT INTO `user` (`user_id`, `user_username`, `user_password`) VALUES
 INSERT INTO `problem` (`problem_id`, `problem_text`) VALUES
 (1, "problem1"),
 (2, "problem2"),
-(3, "find all f:R -> R such that f(x) = x for all real numbers x");
+(3, "Consider functions f,g:Z->Z such that f(g(x)) = x for all x in Z. Is it necessarily ture that g(f(x)) = x for all x in Z?");
 
 --
 -- Populate `hint` table with test data
